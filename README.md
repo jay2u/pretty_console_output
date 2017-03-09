@@ -23,7 +23,7 @@ gem 'pretty_console_output'
 Usage
 --------
 
-![usage_output](http://i.imgur.com/NmZh9CR.png)
+![usage_output](http://i.imgur.com/aM5EANu.png)
 
 ```ruby
 require 'pretty_console_output' 
