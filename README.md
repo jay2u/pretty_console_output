@@ -1,4 +1,4 @@
-Pretty Console Output ( for Ruby 2 / Rails )
+Pretty Console Output ( for Ruby 2.x / Rails )
 =================================================
 
 [![Gem Version](https://badge.fury.io/rb/pretty_console_output.svg)](https://badge.fury.io/rb/pretty_console_output)
