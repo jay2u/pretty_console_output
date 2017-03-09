@@ -2,6 +2,7 @@ Pretty Console Output ( for Ruby 2 / Rails )
 =================================================
 
 [![Gem Version](https://badge.fury.io/rb/pretty_console_output.svg)](https://badge.fury.io/rb/pretty_console_output)
+[![Build Status](https://travis-ci.org/guanting112/pretty_console_output.svg?branch=master)](https://travis-ci.org/guanting112/pretty_console_output)
 [![Code Climate](https://codeclimate.com/github/guanting112/pretty_console_output/badges/gpa.svg)](https://codeclimate.com/github/guanting112/pretty_console_output)
 
 Installation
