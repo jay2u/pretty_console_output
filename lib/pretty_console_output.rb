@@ -8,12 +8,13 @@ module PrettyConsoleOutput
       options[:theme]  = {} if options[:theme].nil?
       options[:stdout] = $stdout if options[:stdout].nil?
 
-      @color = Color.new(options[:stdout])
-      @theme = Theme.new(options[:theme])
+      @color  = Color.new(options[:stdout])
+      @theme  = Theme.new(options[:theme])
+      @stdout = options[:stdout]
     end
 
     def puts(obj)
-      $stdout.puts obj
+      @stdout.puts obj
     end
 
     def info(obj)
