@@ -68,17 +68,3 @@ module PrettyConsoleOutput
       end
   end
 end
-
-console = PrettyConsoleOutput::Console.new
-
-console.tag "Reload Host files."
-console.log "Start At: " + Time.now.localtime.to_s
-
-console.tag "Check File Exists"
-console.info 'Read .gitignore'
-console.data IO.read('.gitignore')
-console.error "sample.php Not Found"
-console.error "upload/a05bf0.jpg Not Found"
-
-console.tag "All Done"
-console.done "OK: " + Time.now.to_s
