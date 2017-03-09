@@ -17,32 +17,33 @@ module PrettyConsoleOutput
     end
 
     def info(obj)
-      icon   = @color.colorize("  ☞ ", @theme.info_color)
-      string = @color.colorize(obj.to_s, @theme.info_color)
+      string = obj.to_s
 
-      puts "#{icon} #{string}"
+      puts @color.colorize("  ☞  #{string}", @theme.info_color)
     end
 
     def log(obj)
-      puts "     #{@color.colorize(obj.to_s, @theme.log_color)}"
+      string = obj.to_s
+
+      puts @color.colorize("     #{string}", @theme.log_color)
     end
 
     def data(obj)
-      puts @color.colorize("     #{obj.to_s}".gsub(/\n/, "\n     "), @theme.log_color)
+      string = obj.to_s
+
+      puts @color.colorize("     #{string}".gsub(/\n/, "\n     "), @theme.log_color)
     end
 
     def error(obj)
-      icon   = @color.colorize("  ✘ ", @theme.error_color)
-      string = @color.colorize(obj.to_s, @theme.error_color)
+      string = obj.to_s
 
-      puts "#{icon} #{string}"
+      puts @color.colorize("  ✘  #{string}", @theme.error_color)
     end
 
     def done(obj)
-      icon   = @color.colorize("  √ ", @theme.done_color)
-      string = @color.colorize(obj.to_s, @theme.done_color)
+      string = obj.to_s
 
-      puts "#{icon} #{string}"
+      puts @color.colorize("  ✓  #{string}", @theme.done_color)
     end
 
     def tag(obj)
@@ -67,3 +68,17 @@ module PrettyConsoleOutput
       end
   end
 end
+
+console = PrettyConsoleOutput::Console.new
+
+console.tag "Reload Host files."
+console.log "Start At: " + Time.now.localtime.to_s
+
+console.tag "Check File Exists"
+console.info 'Read .gitignore'
+console.data IO.read('.gitignore')
+console.error "sample.php Not Found"
+console.error "upload/a05bf0.jpg Not Found"
+
+console.tag "All Done"
+console.done "OK: " + Time.now.to_s
