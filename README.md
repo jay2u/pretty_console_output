@@ -22,6 +22,8 @@ gem 'pretty_console_output'
 Usage
 --------
 
+![usage_output](http://i.imgur.com/NmZh9CR.png)
+
 ```ruby
 require 'pretty_console_output' 
 
@@ -39,8 +41,6 @@ console.error "upload/a05bf0.jpg Not Found"
 console.tag "All Done"
 console.done "OK: " + Time.now.to_s
 ```
-
-![usage_output](http://i.imgur.com/pgzrEjV.png)
 
 
 LICENSE
