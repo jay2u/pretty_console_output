@@ -20,7 +20,7 @@ module PrettyConsoleOutput
     def info(obj)
       string = obj.to_s
 
-      puts @color.colorize("  ☞  #{string}", @theme.info_color)
+      puts @color.colorize("  ➡️  #{string}", @theme.info_color)
     end
 
     def log(obj)
